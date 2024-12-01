@@ -1,0 +1,59 @@
+{
+  "window": {
+    "width": 800,
+    "height": 600,
+    "title": "Creature Simulation"
+  },
+  "colors": {
+    "white": [255, 255, 255],
+    "black": [0, 0, 0]
+  },
+  "paths": {
+    "image_path": "../assets/images",
+    "log_folder": "logs",
+    "config_path": "config/config.json"
+  },
+  "simulation": {
+    "speed": 1
+  },
+  "tile_size": 32,
+  "genome": {
+    "growth_rate": { "min": 0.1, "max": 1.0 },
+    "max_size": { "min": 5, "max": 20 },
+    "speed": { "min": 0.5, "max": 2.0 },
+    "spore_rate": { "min": 0.1, "max": 1.0 },
+    "reproduction_rate": { "min": 0.1, "max": 1.0 },
+    "predation_rate": { "min": 0.1, "max": 1.0 },
+    "trap_rate": { "min": 0.1, "max": 1.0 },
+    "size": { "min": 5, "max": 20 },
+    "adult_weight": { "min": 1, "max": 10 },
+    "max_longevity": { "min": 5, "max": 40 },
+    "vision_range": { "min": 50, "max": 200 },
+    "metabolic_rate": { "min": 0.1, "max": 1.0 },
+    "body_mass": { "min": 1, "max": 10 },
+    "diet": ["herbivore", "carnivore", "omnivore"]
+  },
+  "energy_multipliers": {
+    "animal": {
+      "carnivore": 1.2,
+      "herbivore": 1.0,
+      "omnivore": 1.1
+    },
+    "plant": {
+      "plant": 0.5,
+      "carnivorous_plant": 0.8
+    },
+    "microorganism": {
+      "fungus": 0.7,
+      "bacteria": 0.6
+    }
+  },
+  "food_chain": {
+    "carnivore": ["herbivore", "omnivore"],
+    "omnivore": ["herbivore", "plant", "bacteria"],
+    "herbivore": ["plant"],
+    "carnivorous_plant": ["omnivore", "herbivore", "bacteria"],
+    "fungus": ["bacteria", "dead"],
+    "bacteria": ["dead"]
+  }
+}
