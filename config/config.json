@@ -28,7 +28,7 @@
     "size": { "min": 5, "max": 20 },
     "adult_weight": { "min": 1, "max": 10 },
     "max_longevity": { "min": 5, "max": 40 },
-    "vision_range": { "min": 50, "max": 200 },
+    "vision_range": { "min": 200, "max": 400 },
     "metabolic_rate": { "min": 0.1, "max": 1.0 },
     "body_mass": { "min": 1, "max": 10 },
     "diet": ["herbivore", "carnivore", "omnivore"]
