@@ -18,42 +18,37 @@
   },
   "tile_size": 32,
   "genome": {
-    "growth_rate": { "min": 0.1, "max": 1.0 },
-    "max_size": { "min": 5, "max": 20 },
-    "speed": { "min": 0.5, "max": 2.0 },
-    "spore_rate": { "min": 0.1, "max": 1.0 },
-    "reproduction_rate": { "min": 0.1, "max": 1.0 },
+    "growth_rate": { "min": 0.2, "max": 0.8 },
+    "max_size": { "min": 8, "max": 15 },
+    "speed": { "min": 0.8, "max": 1.5 },
+    "spore_rate": { "min": 0.2, "max": 0.7 },
+    "reproduction_rate": { "min": 0.3, "max": 0.8 },
     "predation_rate": { "min": 0.1, "max": 1.0 },
-    "trap_rate": { "min": 0.1, "max": 1.0 },
-    "size": { "min": 5, "max": 20 },
+    "trap_rate": { "min": 0.1, "max": 0.5 },
+    "size": { "min": 5, "max": 15 },
     "adult_weight": { "min": 1, "max": 10 },
-    "max_longevity": { "min": 5, "max": 40 },
-    "vision_range": { "min": 200, "max": 400 },
-    "metabolic_rate": { "min": 0.1, "max": 1.0 },
-    "body_mass": { "min": 1, "max": 10 },
+    "max_longevity": { "min": 10, "max": 30 },
+    "vision_range": { "min": 200, "max": 300 },
+    "metabolic_rate": { "min": 0.2, "max": 0.8 },
+    "body_mass": { "min": 3, "max": 8 },
     "diet": ["herbivore", "carnivore", "omnivore"]
   },
   "energy_multipliers": {
     "animal": {
-      "carnivore": 1.2,
-      "herbivore": 1.0,
-      "omnivore": 1.1
-    },
-    "plant": {
-      "plant": 0.5,
-      "carnivorous_plant": 0.8
+      "carnivore": 1.0,
+      "herbivore": 1.1,
+      "omnivore": 1.0
     },
     "microorganism": {
-      "fungus": 0.7,
-      "bacteria": 0.6
+      "fungus": 0.6,
+      "bacteria": 0.7
     }
   },
   "food_chain": {
     "carnivore": ["herbivore", "omnivore"],
-    "omnivore": ["herbivore", "plant", "bacteria"],
-    "herbivore": ["plant"],
-    "carnivorous_plant": ["omnivore", "herbivore", "bacteria"],
-    "fungus": ["bacteria", "dead"],
+    "omnivore": ["herbivore", "fungus"],
+    "herbivore": [],
+    "fungus": ["dead"],
     "bacteria": ["dead"]
   }
 }
